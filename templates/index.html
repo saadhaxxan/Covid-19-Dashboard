@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class='container1'>
+        <h1>COVID-19 Tracker</h1>
+
+        <h6>"This dashboard continuosly queries public databases and updates cases for all countries."
+        </h6>
+        <h2>Follow Me</h2>
+        <div class="center">
+            <a href="https://www.linkedin.com/in/saad-haxxan/" target="_blank"><img
+                    src="../static/LinkedIn-Logo.png"></a>
+            &nbsp;&nbsp;
+            &nbsp;&nbsp;
+            <a href="https://www.facebook.com/saaadhaxxan/" target="_blank"><img src="../static/Facebook-Logo.png"></a>
+            &nbsp;&nbsp;
+            &nbsp;&nbsp;
+            <a href="https://www.instagram.com/saadhaxxan/" target="_blank"><img src="../static/Instagram_logo.jpg"></a>
+        </div>
+    </div>
+    <div class='container2'>
+        <h5>Total Confirmed &nbsp;&nbsp; &nbsp;&nbsp; {{total_confirmed}}</h5>
+        <br>
+        <br>
+        <h5>Total Deaths &nbsp;&nbsp; &nbsp;&nbsp; {{total_deaths}}</h5>
+        <br>
+        <br>
+        <h5>Total Recovered &nbsp;&nbsp; &nbsp;&nbsp; {{total_recovered}}</h5>
+        <br>
+        <br>
+        <h5>Last Updated &nbsp;&nbsp; &nbsp;&nbsp; {{date}}</h5>
+        <h5 style="font-size: 1rem;
+        text-align: center;
+        color: rgba(160, 160, 160);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-top: 10px;
+        display: block;">Other Projects</h5>
+        <a style="text-decoration: none;" href="/search" target="_blank"><h4 style="font-size: 0.7rem;
+        text-align: center;
+        color: rgba(160, 160, 160);
+        letter-spacing: 3px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-top: 10px;
+        display: block;"><b><u>COVID-19 Search</b></u></h4></a>
+        <a style="text-decoration: none;" href="https://corona-virus-alert.000webhostapp.com/" target="_blank"><h4 style="font-size: 0.7rem;
+        text-align: center;
+        color: rgba(160, 160, 160);
+        letter-spacing: 3px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-top: 10px;
+        display: block;"><u><b>Map Representation<b><u></h4></a>
+        <a style="text-decoration: none;" href="/graphs" target="_blank"><h4 style="font-size: 0.7rem;
+         text-align: center;
+         color: rgba(160, 160, 160);
+         letter-spacing: 3px;
+         text-transform: uppercase;
+         font-size: 1rem;
+         margin-bottom: 0.5rem;
+         line-height: 1.2;
+         font-weight: 600;
+         margin-top: 10px;
+         display: block;"><b><u>Graphical Analysis</b></u></h4></a>
+        
+    </div>
+    <div class="container3">
+
+        <h1>Deaths</h1>
+        <table>
+            {% for data in death_data %}
+
+            <tr>
+                <td width="70%">{{data['Country']}}</td>
+                <td width="30%">{{data['deaths']}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+    <div class="container4">
+
+        <h1>Confirmed</h1>
+        <table>
+            {% for data in confirmed_data %}
+
+            <tr>
+                <td width="70%">{{data['Country']}}</td>
+                <td width="30%">{{data['Confirmed']}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="container5">
+
+        <h1>Recovered</h1>
+        <table>
+            {% for data in recovered_data %}
+
+            <tr>
+                <td width="70%">{{data['Country']}}</td>
+                <td width="30%">{{data['Recovered']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+    <div class="container6">
+
+
+        <iframe src="https://corona-virus-alert.000webhostapp.com/"></iframe>
+    </div>
+
+</body>
+
+</html>

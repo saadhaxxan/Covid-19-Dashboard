@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <title>Covid-19 Research Papers</title>
+    <style>
+        body {
+            background-color: #dcdde1;
+            height: 100%;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #dcdde1;
+            color: black;
+            text-align: center;
+        }
+
+        /* .form-control {
+            border: blanchedalmond 2px;
+            border-radius: 2px;
+        }
+
+        .input-lg {
+            border: blanchedalmond 2px;
+            border-radius: 2px;
+        } */
+
+        input[type=text] {
+            border: 3px solid #dcdde1;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+
+            <font size="3" style="color:#000;">
+                <br>
+                <i>Source: COVID-19 Open Research Dataset (CORD-19). 2020. Version 2020-03-13. Retrieved from
+                    https://pages.semanticscholar.org/coronavirus-research. Accessed {{date}}.
+                    doi:10.5281/zenodo.3715506</i>
+                <br>
+                <b>Github repo: <a href="https://github.com/saadhaxxan/Covid-19-Search">https://github.com/saadhaxxan/Covid-19-Search</a></b>
+
+            </font>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="background:transparent !important" class="jumbotron">
+            <div>
+                <p>
+                    <center>
+                        <font size="8" style="color:rgb(51,51,250);"><b>COVID-19 Search</b></font>
+                    </center>
+                </p>
+            </div>
+        </div>
+
+        <form action="/search/results" method="post">
+            <div class="input-group">
+                <input type="text" class="form-control input-lg" name="input" placeholder="Search" autofocus required>
+
+                <div class="input-group-btn">
+                    <button class="btn btn-primary btn-lg" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <b>All Rights Reserved Saad Hassan 2020</b>
+    </div>
+</body>
+
+</html>

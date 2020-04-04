@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Covid-19 Research Papers</title>
+    <style>
+        body {
+            background-color: #fff;
+            height: 100%;
+            font-family: 'Nunito Sans', sans-serif;
+
+        }
+        th{
+            font-size: 2rem;
+            color: black;
+            font-weight: 600;
+
+        }
+        TD{
+            font-size: 1.5rem;
+            color: black;
+            font-weight: 600;
+        }
+        input[type=text] {
+            border: 3px solid #dcdde1;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div style="font-family: 'Times New Roman'">
+
+                <font size="3" style="color:#000;">
+                    <br>
+                    <i>Source: COVID-19 Open Research Dataset (CORD-19). 2020. Version 2020-03-13. Retrieved from
+                        https://pages.semanticscholar.org/coronavirus-research. Accessed {{date}}.
+                        doi:10.5281/zenodo.3715506</i>
+                    <br>
+                    <b>Github repo: <a href="https://github.com/saadhaxxan/Covid-19-Search">https://github.com/saadhaxxan/Covid-19-Search</a></b>
+
+                </font>
+            </div>
+        </div>
+
+        <div style="background:transparent !important" class="jumbotron">
+            <div>
+                <p>
+                    <center>
+                        <font size="8" style="color:rgb(51,51,250);"><b>COVID-19 Search</b></font>
+                    </center>
+                </p>
+            </div>
+        </div>
+
+        <form action="/search/results" method="post">
+            <div class="input-group">
+                <input id="myInput" onkeyup="myFunction()" type="text" class="form-control input-lg" name="input"
+                    placeholder="Search" autofocus>
+                <div class="input-group-btn">
+                    <button class="btn btn-primary btn-lg" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- <center>
+            <br/> <h3 style="font-family: 'Source Sans Pro', sans-serif;"> results found for <em><b>{{search_terms}}</b></em> </h3>
+        </center> -->
+
+        <br />
+
+        <table class="table" id="table" >
+
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Abstract</th>
+                    <th>Authors</th>
+                    <th>Doi</th>
+                </tr>
+            </thead>
+
+            {% for item in data %}
+            <tbody>
+                <tr>
+                    <TD class="c2">{{item.title}}</TD>
+                    <TD class="c3">{{item.abstract}}</TD>
+                    <TD class="c4"><SPAN>{{item.authors}}</SPAN></TD>
+                    <TD class="c5">
+                        <a href="{{item.url}}">{{item.url}}</a>
+                    </TD>
+
+                </tr>
+            </tbody>
+            {% endfor %}
+
+        </table>
+    </div>
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
