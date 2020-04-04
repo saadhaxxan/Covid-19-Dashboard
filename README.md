@@ -32,9 +32,9 @@ Search engine for bibliography related to covid-19 from:
 
 Goto cmd/command line in your computer and type
 ```
-pip install -r requirements.txt
 git clone https://github.com/saadhaxxan/Covid-19-Dashboard.git
 cd Covid-19-Dashboard
+pip install -r requirements.txt
 python app.py
 ```
 
