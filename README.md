@@ -1,11 +1,9 @@
-<h1 align="center">Covid-19 Search Engine</h1>
+<h1 align="center">Covid-19-Dashboard</h1>
 <a href="#">
   <div align="center">
     <img src="images/desktop.png" width='700'/>
   </div>
-</a>
-
-# Covid-19-Dashboard
+</a> 
 THIS DASHBOARD CONTINUOUSLY QUERIES PUBLIC DATABASES AND UPDATES CASES FOR ALL COUNTRIES.
 
 
