@@ -4,7 +4,9 @@
     <img src="images/desktop.png" width='700'/>
   </div>
 </a> 
+
 THIS DASHBOARD CONTINUOUSLY QUERIES PUBLIC DATABASES AND UPDATES CASES FOR ALL COUNTRIES.
+
 ![Live Demo](https://covid-19dashboard.herokuapp.com/)
 
 
