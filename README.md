@@ -7,7 +7,7 @@
 
 THIS DASHBOARD CONTINUOUSLY QUERIES PUBLIC DATABASES AND UPDATES CASES FOR ALL COUNTRIES.
 
-![Live Demo](https://covid-19dashboard.herokuapp.com/)
+[![Live Demo](https://covid-19dashboard.herokuapp.com/)]
 
 
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=for-the-badge&logo=appveyor)](#)
