@@ -1,13 +1,12 @@
-<h1 align="center">Covid-19-Dashboard</h1>
+<h1 align="center">Covid-19 Dashboard</h1>
 <a href="#">
   <div align="center">
     <img src="images/desktop.png" width='700'/>
+    <h1>THIS DASHBOARD CONTINUOUSLY QUERIES PUBLIC DATABASES AND UPDATES CASES FOR ALL COUNTRIES.</h1>
   </div>
 </a> 
 
-THIS DASHBOARD CONTINUOUSLY QUERIES PUBLIC DATABASES AND UPDATES CASES FOR ALL COUNTRIES.
-
-[![Live Demo](https://covid-19dashboard.herokuapp.com/)]
+- [Live Demo](https://covid-19dashboard.herokuapp.com)
 
 
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=for-the-badge&logo=appveyor)](#)
